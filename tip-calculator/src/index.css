@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brand: hsl(204.6, 100%, 26.3%);
+  --brand-var-dark: hsl(204.7, 100%, 22.4%);
+  --brand-var-light: hsl(204.6, 100%, 33.9%);
+  --neutral1: hsl(204, 31.4%, 53.1%);
+  --neutral2: hsl(202.8, 25%, 54.5%);
+  --neutral3: hsl(205, 79.8%, 74.7%);
+  --neutral4: hsl(204.8, 64.4%, 82.4%);
+  --white: hsl(179, 41%, 99%);
+  --error: hsl(354.7, 79.8%, 38.8%);
+
+  /* utils */
+
+  --padding: clamp(2rem, 4vw, 3.5rem);
+  --padding-lg: clamp(4rem, 7vw, 6.5rem);
+  --rounded-sm: 0.2rem;
+  --rounded-md: 0.4rem;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--neutral2);
+  padding-block: var(--padding-lg);
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  gap: 4rem;
+  margin-inline: auto;
+  width: 900px;
+}
+
+.container {
+  padding: var(--padding);
+  background: var(--neutral4);
+  border-radius: 2rem;
+  box-shadow: 0 1rem 5rem hsl(204, 50%, 20%);
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--padding);
+}
+
+.btn {
+  font: inherit;
+  background-color: var(--brand);
+  border: none;
+  border-radius: var(--rounded-sm);
+  padding: 0.3rem 0.8rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0.2rem 2rem var(--brand-var-dark), 0 0 0 -0.2rem var(--brand),
+    0 0 0 -0.2rem var(--neutral3);
+  transition: box-shadow 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color 300ms;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 var(--brand-var-dark), 0 0 -0.2rem var(--brand),
+    0 0 -0.2rem var(--neutral3);
+  background-color: var(--neutral3);
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0.2rem 1.3rem var(--brand-var-dark), 0 0 0 0.2rem var(--brand),
+    0 0 0 0.5rem var(--neutral3);
+}
+
+/* media queries */
+
+@media screen and (min-width: 1024px) {
+  .container {
+    g
+  }
+}
