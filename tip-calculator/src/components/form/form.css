@@ -88,8 +88,9 @@
 }
 
 .tip__btn {
-  background-color: var(--brand);
+  background-color: var(--brand-var-dark);
   color: var(--white);
+  cursor: pointer;
   border-radius: var(--rounded-md);
   padding: 0.2rem;
   transition: background-color 300ms;

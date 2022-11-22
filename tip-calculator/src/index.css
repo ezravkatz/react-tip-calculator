@@ -30,12 +30,15 @@ body {
   font-size: 1.5rem;
   background-color: var(--neutral2);
   padding-block: var(--padding-lg);
+  height: 100vh;
+  place-content: center;
+  place-items: center;
 }
 
 .wrapper {
   display: grid;
   place-items: center;
-  gap: 4rem;
+  gap: 3rem;
   margin-inline: auto;
   width: 900px;
 }
@@ -51,7 +54,7 @@ body {
 }
 
 .btn {
-  font: inherit;
+  color: var(--white);
   background-color: var(--brand);
   border: none;
   border-radius: var(--rounded-sm);
@@ -81,9 +84,3 @@ body {
 }
 
 /* media queries */
-
-@media screen and (min-width: 1024px) {
-  .container {
-    g
-  }
-}
